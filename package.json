@@ -1,7 +1,7 @@
 {
-  "name": "ts-starter",
+  "name": "@creately/rx-lodash",
   "version": "0.0.0",
-  "description": "A bare minimum starter repository for writing and testing browser modules using typescript.",
+  "description": "Useful RxJS operators based on functions available in lodash",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -11,10 +11,15 @@
     "test:watch": "jest --watch --coverage",
     "prepublish": "npm run lint && npm run build"
   },
-  "author": "Anonymous",
+  "author": "Thanish",
   "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "rxjs": "^6.4.0"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.11",
+    "@types/lodash": "^4.14.123",
     "jest": "^24.7.1",
     "prettier": "^1.16.4",
     "ts-jest": "^24.0.2",

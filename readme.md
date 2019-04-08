@@ -1,27 +1,23 @@
-# Typescript Starter
+# RxLodash
 
-A bare minimum starter repository for writing and testing browser modules using typescript.
+Useful RxJS operators based on functions available in lodash
 
 ## Getting Started
 
-- Clone this repository
+ - Install the module
 
 ```shell
-git clone https://github.com/creately/ts-starter.git my-module
+npm i @creately/rx-lodash
 ```
 
-- Update the package.json file
-- Replace the git origin
+ - Import and use operators
 
-```shell
-git remote remove origin
-git remote add origin MY_ORIGIN
-```
+```ts
+import { lodashThrottle } from '@creately/rx-lodash';
 
-## Updating Dependencies
+const throttled = source.pipe(
+    lodashThrottle(c.time)
+);
 
-Pull new commits from this repository to your own repository for updates.
-
-```shell
-git pull https://github.com/creately/ts-starter.git
+throttled.subscribe(val => console.log(val));
 ```
